@@ -1,36 +1,35 @@
+
+
+int maxMasks = 15; // Total # of masks
+int imageIndex = 0; // Initial image to be displayed is the first "animalMask0.jpg"
+
+// Declaring an array of masks
+PImage[] masks = new PImage[maxMasks]; 
+
 void setup() {
-  size(400, 400); 
-  background(255); 
+  size(550, 550);
+  smooth();
+  frameRate (10);
+
+  // Loading the lenses into the array
+  // Don't forget to put the JPG files in the data folder!
+
+  for (int i = 0; i < masks.length; i ++ ) {
+    masks[i] = loadImage( "animalMask" + i + ".png" );
+  }
 }
 
+
 void draw() {
-  fill(200, 150, 100); 
-  ellipse(200, 300, 150, 100);
-  
-  // Draw the cat's head
-  ellipse(200, 200, 100, 100);
-  
-  // Draw the cat's ears
-  triangle(160, 160, 180, 120, 200, 160);
-  triangle(240, 160, 220, 120, 200, 160);
-  
-  // Draw the cat's eyes
-  fill(0); 
-  ellipse(180, 190, 20, 20); 
-  ellipse(220, 190, 20, 20); 
-  
-  // Draw the cat's nose
-  fill(255, 150, 150); 
-  triangle(195, 210, 205, 210, 200, 220);
-  
-  // Draw the cat's mouth
-  line(200, 220, 200, 230); 
-  line(200, 230, 190, 240); 
-  line(200, 230, 210, 240); 
-  
-  // Draw the cat's tail
-  noFill(); 
-  stroke(200, 150, 100); 
-  strokeWeight(10); 
-  arc(300, 300, 100, 100, HALF_PI, PI); 
+ // Displaying one image
+ image(masks[imageIndex],25,0);
+ 
+ // animate images (runs automatically)
+ //imageIndex = (imageIndex + 1) % lenses.length;
+ }
+
+void mousePressed() {
+  // new image is layered every time mouse clicked
+  imageIndex = (imageIndex + 1) % masks.length;
 }
+
