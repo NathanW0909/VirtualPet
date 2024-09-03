@@ -46,3 +46,5 @@ void draw() {
   strokeWeight(10); // Thicker tail
   arc(300, 300, 100, 100, HALF_PI, PI); // Tail
 }
+
+
