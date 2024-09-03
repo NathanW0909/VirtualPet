@@ -1,1 +1,50 @@
 
+
+
+void setup() {
+  size(400, 400); // Set the canvas size
+  background(255); // Set the background color to white
+}
+
+
+
+void draw() {
+  // Draw the cat's body
+  fill(200, 150, 100); // Brown color
+  ellipse(200, 300, 150, 100); // Body
+
+
+  // Draw the cat's head
+  ellipse(200, 200, 100, 100); // Head
+
+
+  // Draw the cat's ears
+  triangle(160, 160, 180, 120, 200, 160); // Left ear
+  triangle(240, 160, 220, 120, 200, 160); // Right ear
+
+
+  // Draw the cat's eyes
+  fill(0); // Black color
+  ellipse(180, 190, 20, 20); // Left eye
+  ellipse(220, 190, 20, 20); // Right eye
+
+
+  // Draw the cat's nose
+  fill(255, 150, 150); // Pink color
+  triangle(195, 210, 205, 210, 200, 220); // Nose
+
+
+  // Draw the cat's mouth
+  line(200, 220, 200, 230); // Middle line
+  line(200, 230, 190, 240); // Left side
+  line(200, 230, 210, 240); // Right side
+
+
+  // Draw the cat's tail
+  noFill(); // No fill for the tail
+  stroke(200, 150, 100); // Brown color for the tail
+  strokeWeight(10); // Thicker tail
+  arc(300, 300, 100, 100, HALF_PI, PI); // Tail
+}
+
+
