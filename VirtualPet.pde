@@ -6,6 +6,7 @@ void setup(){
 
 }
 
+
 void draw(){
   //more of your code here
 // Draw the fish body
