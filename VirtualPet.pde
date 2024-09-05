@@ -8,7 +8,7 @@ void setup(){
 
 
 void draw(){
-  //more of your code here
+
 // Draw the fish body
   fill(255, 165, 0); // Orange color
   ellipse(200, 200, 150, 80); // Fish body
